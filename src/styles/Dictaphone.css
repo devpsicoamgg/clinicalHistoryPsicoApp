@@ -1,0 +1,103 @@
+/* Estilo predeterminado para el botón de inicio */
+.mic-button-start {
+  background-color: #242424; /* Mantén el fondo blanco al hacer hover */
+  color: #fff; /* Mantén el color de texto negro al hacer hover */
+  border: none;
+  padding: 10px 40px 10px 20px; /* Ajusta el padding para alinear el texto a la izquierda */
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative; /* Establece la posición relativa para el botón */
+  background-image: url("../img/micwhite.png"); /* Imagen negra por defecto */
+  background-size: 24px 24px; /* Ajusta el tamaño de la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: 88% center; /* Alinea la imagen a la derecha del botón */
+}
+
+
+.mic-button-stop {
+  background-color: #242424; 
+  color: #fff; 
+  border: none;
+  padding: 10px 40px 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  background-image: url("../img/micwithestop.png"); 
+  background-size: 24px 24px; 
+  background-repeat: no-repeat; 
+  background-position: 88% center; 
+}
+
+/* Cambia la imagen y otros estilos al hacer hover en el botón de inicio */
+.mic-button-start:hover {
+  background-color: #fff; /* Fondo blanco */
+  color: #242424; /* Color de texto negro */
+  border: solid 1px #242424;
+  transform: translateY(-2px); /* Eleva ligeramente el botón al hacer hover */
+  background-image: url("../img/micblack.png"); /* Cambia a la imagen blanca al hacer hover */
+}
+
+.mic-button-stop:hover {
+  background-color: #fff; /* Fondo blanco */
+  color: #242424; /* Color de texto negro */
+  border: solid 1px #242424;
+  transform: translateY(-2px); /* Eleva ligeramente el botón al hacer hover */
+  background-image: url("../img/micblackstop.png")
+}
+
+
+
+.clinical-history-container p {
+  font-size: 18px; /* Tamaño de fuente para el párrafo "Motivo de consulta" */
+  font-weight: bolder;
+  color: #242424; /* Color de texto blanco */
+  margin-top: 20px; /* Espacio en la parte superior del párrafo */
+}
+
+
+.dictaphone-textarea {
+  width: 90%;
+  height: 120px;
+  resize: none;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  color: #242424;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9);
+  transform: translateZ(0); 
+  perspective: 1000px; 
+}
+
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg); /* Rojo */
+  }
+  25% {
+    filter: hue-rotate(90deg); /* Amarillo */
+  }
+  50% {
+    filter: hue-rotate(180deg); /* Verde */
+  }
+  75% {
+    filter: hue-rotate(270deg); /* Azul */
+  }
+  100% {
+    filter: hue-rotate(360deg); /* De vuelta a Rojo */
+  }
+  
+}
+
+/* Aplicar la animación a la imagen cuando está en estado de grabación */
+.recording-img {
+  animation: changeColor 0.8s linear infinite; /* Duración de 5 segundos (ajusta según sea necesario) */
+}
+
+
+

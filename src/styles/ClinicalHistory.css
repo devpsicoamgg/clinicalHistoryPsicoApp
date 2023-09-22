@@ -1,0 +1,485 @@
+:root {
+  background-color: #242424;
+}
+
+
+.clinical-history-container {
+  font-family:  sans-serif, Helvetica, Arial; 
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 12rem;
+  padding-right: 12rem;
+  text-align: center;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--background-color);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.patient-list {
+  min-height: 45px;
+  background-color: #f5f5f5; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  padding: 5px; 
+  margin: 25px 10px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  color: #242424; 
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.772); 
+}
+
+
+.input-area-others-indicators {
+  width: 750px;
+  height: 90px;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 9); 
+  border: 1px solid #ccc; 
+  margin-bottom: 12px; 
+  margin-top: 12px; 
+}
+
+
+.search-input {
+  width: 250px;
+  height: 26px;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 9); 
+  border: 1px solid #ccc; 
+}
+
+
+.transcriptionInput {
+    width: 100%;
+
+}
+
+
+.label-dx {
+  font-size: 16px; 
+  font-weight: bold; 
+  margin-bottom: 8px; 
+  color: #333; 
+
+}
+
+
+
+.summary-data-container,
+.diagnoses-impression-container,
+.others-indicators,
+.consultation-reason,
+.mental-examination
+{
+  background-color: #f5f5f5; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  padding: 5px; 
+  margin: 25px 10px; 
+  text-align: center; 
+  color: #242424; 
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.772); 
+}
+
+
+
+
+.button-write {
+  background-color: #242424; 
+  color: #fff; 
+  border: none;
+  padding: 10px 40px 10px 20px; 
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  background-image: url("../img/whitewritehov.png"); 
+  background-size: 18px 17px; 
+  background-repeat: no-repeat; 
+  background-position: 89% center; 
+}
+
+.button-write:hover {
+  background-color: #fff; 
+  color: #242424; 
+  border: solid 1px #242424;
+  transform: translateY(-2px); 
+  background-image: url("../img/whitewrite.png"); 
+ 
+}
+
+.btn-show-mental-examination{
+  background-color: #242424; 
+  color: #fff; 
+  border: none;
+  padding: 10px 40px 10px 20px; 
+  margin: 5px;
+  background-size: 38px 40px; 
+  background-image: url("../img/mentalexamination.png");  
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 17px;
+  text-shadow: 1px 1px 9px rgb(119, 119, 119);;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  background-size: 24px 24px; 
+  background-repeat: no-repeat; 
+  background-position: 90% center; 
+  width: 250px;
+}
+
+
+.btn-show-diagnoses-data {
+  background-color: #242424; 
+  color: #fff; 
+  border: none;
+  padding: 10px 40px 10px 20px; 
+  margin: 5px;
+  background-size: 38px 40px; 
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 17px;
+  text-shadow: 1px 1px 9px rgb(119, 119, 119);;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  background-size: 24px 24px; 
+  background-repeat: no-repeat; 
+  background-position: 90% center; 
+  width: 250px;
+}
+
+
+.btn-show-other-indicators {
+  background-color: #242424; 
+  color: #fff; 
+  border: none;
+  padding: 10px 40px 10px 20px; 
+  margin: 5px;
+  font-size: 17px;
+  text-shadow: 1px 1px 9px rgb(119, 119, 119);;
+  background-size: 38px 40px; 
+  background-image: url("../img/compilacion.png");  
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  background-size: 24px 24px; 
+  background-repeat: no-repeat; 
+  background-position: 90% center; 
+  width: 250px;
+}
+
+.btn-show-consultation-reason {
+  background-color: #242424; 
+  color: #fff; 
+  border: none;
+  padding: 10px 40px 10px 20px; 
+  margin: 5px;
+  width: 250px;
+  background-size: 38px 40px; 
+  background-image: url("../img/consulta.png");  
+  font-size: 17px;
+  text-shadow: 1px 1px 9px rgb(119, 119, 119);;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  background-size: 24px 24px; 
+  background-repeat: no-repeat; 
+  background-position: 90% center; 
+}
+
+
+.btn-show-diagnoses-impression {
+  background-color: #242424; 
+  color: #fff; 
+  border: none;
+  padding: 10px 40px 10px 20px; 
+  margin: 5px;
+  width: 250px;
+  background-size: 38px 40px; 
+  background-image: url("../img/diagnostico.png");  
+  font-size: 17px;
+  text-shadow: 1px 1px 9px rgb(119, 119, 119);;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  background-size: 24px 24px; 
+  background-repeat: no-repeat; 
+  background-position: 90% center; 
+}
+
+
+.btn-close-diagnoses-data,
+.btn-close-other-indicators,
+.btn-close-diagnoses-impression,
+.btn-close-consultation-reason,
+.btn-consultation-reason-close {
+  background-color: #242424; 
+  color: #fff; 
+  border: none;
+  padding: 10px 40px 10px 20px; 
+  margin: 5px;
+  background-image: url("../img/cerrar.png");  
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-image 0.3s ease-in-out; /* Cambiamos solo background-image */
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 80% center;
+}
+
+.btn-close-other-indicators:hover,
+.btn-close-diagnoses-impression:hover,
+.btn-close-consultation-reason:hover,
+.btn-consultation-reason-close:hover {
+  background-image: url("../img/cerrarhov.png"); /* Cambia la imagen de fondo al hacer hover */
+}
+
+
+.btn-save {
+  background-color: #242424; 
+  color: #fff; 
+  border: none;
+  padding: 10px 40px 10px 20px; 
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-image 0.3s ease-in-out; /* Cambiamos solo background-image */
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-image: url("../img/guardar.png");  
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+}
+
+.btn-save:hover {
+  background-image: url("../img/guardarhov.png"); 
+}
+
+
+.next-btn {
+  background-color: #242424; 
+  color: #fff; 
+  border: none;
+  padding: 10px 40px 10px 20px; 
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  background-image: url("../img/nextwithe.png");  
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+}
+
+
+.before-btn {
+  background-color: #242424; 
+  color: #fff; 
+  border: none;
+  padding: 10px 30px 10px 58.390px;
+  margin-left: 15px;
+  margin: 5px;
+  margin-top: 1px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-image: url("../img/backwithe.png");  
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 10% center;
+}
+
+.before-btn:hover {
+  background-image: url("../img/backblack.png");
+  background-color: #fff; 
+  color: #242424; 
+  border: solid 1px #242424;
+  transform: translateY(-2px); 
+}
+
+
+
+.next-btn:hover {
+  background-image: url("../img/nextblack.png");
+  background-color: #fff; 
+  color: #242424; 
+  border: solid 1px #242424;
+  transform: translateY(-2px); 
+}
+
+.options-choices,
+.options-choices-dbamemoria {
+  background-color: #242424;; 
+  color: #fff; 
+  font-size: 11px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  border: solid 1px #242424;
+  transform: translateY(-2px); 
+  background-size: 38px 40px; 
+  width: 450px;
+}
+
+
+.porteyapariencia {
+  margin-bottom: 20px;
+}
+
+
+.checkboxport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+
+}
+
+
+.checkboxport input[type="checkbox"] {
+  margin-right: 8px;
+  width: 16px; 
+  height: 16px; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+.other-indicators-container {
+  border: 1px solid #3d3d3d;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.9); 
+  border-radius: 5px;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+
+
+
+}
+.porteyaparienciacontainer {
+  border: 1px solid #3d3d3d;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.9); 
+  border-radius: 5px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.porteyapariencia input[type="text"] {
+  width: 78%;
+  padding: 10px;
+  border: 1px solid #3d3d3d;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.9); 
+  border-radius: 5px;
+}
+
+
+
+.category-title-bold {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 180, 0, 0.8); 
+}
+
+.category-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 180, 0, 0.8); 
+}
+
+.results {
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 500px;
+  border-radius: 4px;
+  position: relative; 
+}
+
+
+
+.results p {
+  margin: 0;
+  font-size: 16px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative; 
+  z-index: 28; 
+}
+
+.cuantitativa {
+  background-color: rgba(0, 17, 48);
+}
+
+.cualitativa {
+  background-color: rgba(160, 0, 80);
+}
+
+
+.diagnoses-impression {
+  display: flex;
+  border: 1px solid #ccc; 
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.label-dx {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 65px;
+  margin-left: 35px;
+  font-weight: bold;
+}
+
+.input-diagnosis {
+  width: 350px;
+  height: 25px;
+  background-color:  #fff;
+  color: #000000;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 9); 
+  border: 1px solid #969696; 
+  border-radius: 5px;
+}
+
+
+
+.label-dx-choices {
+  width: 130px;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 9); 
+  border: 1px solid #ccc; 
+  height: 30px;
+  margin-left: 25px;
+  border-radius: 5px;
+   background-color: #242424;
+  color: #fff;
+}

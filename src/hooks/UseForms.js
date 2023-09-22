@@ -11,29 +11,35 @@ export const useForm = (initialForm, validationForm) => {
   const [searchResult, setSearchResult] = useState([]);
   const [patients, setPatients] = useState([]);
   const [selectedPatient, setSelectedPatient] = useState(null);
+  const [selectedPatientInfo, setSelectedPatientInfo] = useState({});
 
-const handleSearch = async () => {
-  try {
-    // Realizar una solicitud HTTP para buscar pacientes y retornar los datos
-    const response = await fetch(`http://localhost:3000/patients?search=${searchQuery}`);
-    
-    if (response.ok) {
-      const data = await response.json();
-      return data; // Devolver los datos obtenidos
-    } else {
+  const handleSearch = async () => {
+    try {
+      // Realizar una solicitud HTTP para buscar pacientes y retornar los datos
+      const response = await fetch(
+        `http://localhost:3000/patients?search=${searchQuery}`
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        return data; // Devolver los datos obtenidos
+      } else {
+        // Manejar el error si es necesario
+        console.error("Error al buscar pacientes:", response.status);
+        return []; // En caso de error, retornar un arreglo vacío
+      }
+    } catch (error) {
       // Manejar el error si es necesario
-      console.error("Error al buscar pacientes:", response.status);
+      console.error("Error al buscar pacientes:", error);
       return []; // En caso de error, retornar un arreglo vacío
     }
-  } catch (error) {
-    // Manejar el error si es necesario
-    console.error("Error al buscar pacientes:", error);
-    return []; // En caso de error, retornar un arreglo vacío
-  }
-};
+  };
 
   const selectPatient = (patient) => {
+    console.log(patient);
     setSelectedPatient(patient);
+    setSelectedPatientInfo(patient);
+    setSearchResult([]);
   };
 
   const createData = async (data) => {
@@ -214,6 +220,7 @@ const handleSearch = async () => {
     searchQuery,
     setSearchQuery,
     searchResult,
+    selectedPatientInfo,
     setSearchResult,
     handleSearch,
     selectPatient,

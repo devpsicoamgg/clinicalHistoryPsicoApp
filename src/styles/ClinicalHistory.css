@@ -21,19 +21,47 @@
   text-align: center;
 }
 
-.patient-list {
-  min-height: 45px;
-  background-color: #f5f5f5; 
-  border: 1px solid #ccc; 
-  border-radius: 5px; 
-  padding: 5px; 
-  margin: 25px 10px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center; 
-  color: #242424; 
-  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.772); 
+/* SearchPatientResults.css */
+
+.patient-info-table {
+  border-collapse: collapse; /* Colapsar bordes de la tabla */
+  width: 100%;
+  background-color: #fff; /* Fondo blanco para la tabla */
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.772);
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center; /* Centrar todo el contenido */
+}
+
+.patient-info-table td {
+  border: 1px solid #c8c7c7; /* Borde de 1 píxel con color #242424 */
+  padding: 2px; /* Espaciado interior reducido */
+  text-align: center; /* Centrar el contenido de las celdas */
+  background-color: transparent; /* Fondo transparente para las celdas de datos */
+  color: #242424; /* Texto en color #242424 */
+  font-size: 12px; /* Tamaño de fuente más pequeño */
+}
+
+.patient-info-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Color de fondo para filas pares */
+}
+
+.patient-info-table th {
+  background-color: #4caf50; /* Color de fondo para encabezados */
+  color: white;
+  padding: 2px; /* Espaciado interior reducido */
+  text-align: center; /* Centrar el contenido de los encabezados */
+  font-size: 12px; /* Tamaño de fuente más pequeño */
+}
+
+
+.patient-info-table td.title-table {
+  font-weight: bold; /* Hace que el texto sea negrita */
+}
+
+
+.patient-info-table td.show-table-result{
+  font-style: italic; /* Hace que el texto sea cursiva */
 }
 
 

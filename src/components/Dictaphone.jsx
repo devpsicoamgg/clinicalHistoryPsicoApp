@@ -15,7 +15,7 @@ const Dictaphone = ({ onSaveMotivoConsulta }) => {
   if (!browserSupportsSpeechRecognition) {
     return (
       <span>
-        <h3>
+        <h3 className="title-dictaphone">
           Tu navegador no soporta el modo de reconocimiento de voz 😢 <br />
           <a
             href="https://www.google.com/intl/es_es/chrome/?brand=CHBD&gclid=CjwKCAjw6eWnBhAKEiwADpnw9uJI3944zm8xrc9_omJ8YEGgI_gxI4TWn7feh5431nA05QDRvHsd6BoC99gQAvD_BwE&gclsrc=aw.ds"

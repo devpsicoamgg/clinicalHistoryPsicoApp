@@ -135,7 +135,7 @@ export const useForm = (initialForm, validationForm) => {
       const now = new Date();
       const formattedDate = `${now.getDate()}/${
         now.getMonth() + 1
-      }/${now.getFullYear()} - ${now.toLocaleTimeString("es-CO", {
+      }/${now.getFullYear()} - ${now.toLocaleTimeString("en-US", {
         hour: "2-digit",
         minute: "2-digit",
         hour12: true,

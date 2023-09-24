@@ -51,6 +51,14 @@
 }
 
 
+.title-dictaphone {
+  color: #242424; 
+  font-size: 18px; /* Tamaño de fuente para el párrafo "Motivo de consulta" */
+  font-weight: bolder;
+  text-shadow: 1px 8px 6px rgb(119, 119, 119);
+  font-family: sans-serif, Verdana,  Tahoma;
+}
+
 
 .clinical-history-container p {
   font-size: 18px; /* Tamaño de fuente para el párrafo "Motivo de consulta" */

@@ -73,10 +73,10 @@ const SearchPatientResults = () => {
           <table className="patient-info-table">
             <thead>
               <tr>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Número de Documento</th>
-                <th>Seleccionar</th>
+                <th>NOMBRES</th>
+                <th>APELLIDOS</th>
+                <th>NÚMERO DE DOCUMENTO</th>
+                <th>SELECCIONAR</th>
               </tr>
             </thead>
             <tbody>

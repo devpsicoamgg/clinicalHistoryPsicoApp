@@ -68,13 +68,8 @@ const BasicDataForm = () => {
     try {
       const result = await createData(form);
       console.log("Respuesta del servidor:", result);
-
-      // Limpia el formulario o realiza cualquier otra acción necesaria
-      // Puedes reiniciar el formulario o redirigir al usuario a otra página
-      // Aquí puedes añadir el código necesario para limpiar o redirigir
     } catch (error) {
       console.error("Error al enviar datos:", error);
-      // Maneja los errores si ocurren
     }
   };
 
@@ -276,13 +271,23 @@ const BasicDataForm = () => {
                   <option value="" disabled hidden>
                     🪪 Tipo de documento
                   </option>
-                  <option value="Registro Civil">Registro Civil</option>
-                  <option value="Tarjeta de Identidad">
-                    Tarjeta de Identidad
+                  <option value="Registro civil">Registro civil</option>
+                  <option value="Tarjeta de identidad">
+                    Tarjeta de identidad
                   </option>
-                  <option value="Cédula de Ciudadanía">
-                    Cédula de Ciudadanía
+                  <option value="Cédula de ciudadanía">
+                    Cédula de ciudadanía
                   </option>
+                  <option value="Permiso de permanencia">
+                    Permiso especial de permanencia
+                  </option>
+                  <option value="Cédula extranjería">
+                    Cédula de extranjería
+                  </option>
+                  <option value="Pasaporte">Pasaporte</option>
+                  <option value="Visa">Visa</option>
+                  <option value="Sin documento">Sin documento</option>
+                  <option value="Otro">Otro</option>
                 </select>
                 <span className="error-div">
                   {" "}
@@ -390,12 +395,15 @@ const BasicDataForm = () => {
                   <option value="" disabled hidden>
                     Estado civil
                   </option>
-                  <option value="soltero/a">Soltero/a</option>
-                  <option value="casado/a">Casado/a</option>
-                  <option value="divorciado/a">Divorciado/a</option>
-                  <option value="viudo/a">Viudo/a</option>
-                  <option value="religioso/a">Religioso/a</option>
-                  <option value="otro/a">Otro/a</option>
+                  <option value="Soltero/a">Soltero/a</option>
+                  <option value="Casado/a">Casado/a</option>
+                  <option value="Divorciado/a">Divorciado/a</option>
+                  <option value="Viudo/a">Viudo/a</option>
+                  <option value="Unión marital de hecho">
+                    Unión marital de hecho
+                  </option>
+                  <option value="Religioso/a">Religioso/a</option>
+                  <option value="Otro/a">Otro/a</option>
                   <option value="N/A">N/A</option>
                 </select>
                 <span className="error-div">
@@ -437,8 +445,8 @@ const BasicDataForm = () => {
                   <option value="" disabled hidden>
                     Discapacidad:
                   </option>
-                  <option value="Si">SI</option>
-                  <option value="No">NO</option>
+                  <option value="No">No</option>
+                  <option value="Si">Si</option>
                 </select>
                 <span className="error-div">
                   {" "}
@@ -475,10 +483,10 @@ const BasicDataForm = () => {
                   <option value="" disabled hidden>
                     Género
                   </option>
-                  <option value="masculino">Masculino</option>
-                  <option value="femenino">Femenino</option>
-                  <option value="lgtbi">LGTBI</option>
-                  <option value="otro">Otro</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="LGTBIQ+">LGTBIQ+</option>
+                  <option value="Otro">Otro</option>
                 </select>
                 <span className="error-div">
                   {" "}

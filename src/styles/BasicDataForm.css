@@ -2,6 +2,8 @@
 
 body {
   opacity: 0.95;
+  font-family: sans-serif, Verdana,  Tahoma;
+  text-shadow: 1px 2px 3px rgb(153, 153, 153);
 }
 
 fieldset {
@@ -60,17 +62,17 @@ label {
 /* Estilos para mostrar mensajes de error */
 .error-div {
   color: red;
-  font-size: 10px;
-  font-family: sans-serif;
+  font-size: 12px;
+  font-family: monospace;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20px;
-  margin-top: 5px;
+  height: 25px;
   margin: 5px auto;
-  margin-left: 30px;
-  margin-right: 30px;
-  font-style: italic;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-shadow: none;
 }
 
 /* Estilos de las columnas del formulario */

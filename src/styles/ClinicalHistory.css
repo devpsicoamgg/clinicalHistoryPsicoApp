@@ -47,7 +47,7 @@
 }
 
 .patient-info-table th {
-  background-color: #4caf50; /* Color de fondo para encabezados */
+  background-color: #414141; /* Color de fondo para encabezados */
   color: white;
   padding: 2px; /* Espaciado interior reducido */
   text-align: center; /* Centrar el contenido de los encabezados */
@@ -82,10 +82,14 @@
   border: 1px solid #ccc; 
 }
 
-
+textarea#transcriptionInput,
 .transcriptionInput {
-    width: 100%;
-
+  width: 97%;
+  color: #242424; 
+  font-size: 18px; 
+  font-style: italic;
+  text-shadow: 3px 6px 6px rgb(58, 164, 44);
+  font-family: sans-serif, Verdana,  Tahoma;
 }
 
 
@@ -155,7 +159,7 @@
   cursor: pointer;
   border-radius: 5px;
   font-size: 17px;
-  text-shadow: 1px 1px 9px rgb(119, 119, 119);;
+  text-shadow: 1px 1px 9px rgb(119, 119, 119);
   transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
   position: relative; 

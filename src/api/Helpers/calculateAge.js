@@ -28,7 +28,7 @@ const calculateAge = (birthdate) => {
     ageYears--;
   }
 
-  return `${ageYears} años ${ageMonths} meses ${ageDays} días`;
+  return `${ageYears} años, ${ageMonths} meses y ${ageDays} días.`;
 };
 
 export default calculateAge;

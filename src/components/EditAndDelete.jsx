@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { useForm } from "../hooks/useForms";
+import validationForm from "../utils/ValidationForm";
+import "../styles/BasicDataForm.css";
 import { helpHttp } from "../api/Helpers/helpHttps";
 import calculateAge from "../api/Helpers/calculateAge";
 
@@ -26,26 +28,17 @@ const EditAndDeleteDataForm = () => {
     console.log("Modo edición activado");
   };
 
-  const handleFieldChange = (fieldName, value) => {
-    // Actualiza los campos editados
-    setEditedFields((prevFields) => ({
-      ...prevFields,
-      [fieldName]: value,
-    }));
-  };
+
 
   const handleGuardarClick = async () => {
-    // Lógica para guardar los cambios editados
-    // Actualiza los campos del paciente con los valores editados en editedFields
     const updatedPatientInfo = {
       ...selectedPatientInfo,
       ...editedFields,
     };
 
     try {
-      // Actualiza al paciente en la base de datos
       await updateData(selectedPatientInfo.id, updatedPatientInfo);
-      setIsEditing(false); // Deshabilitar la edición después de guardar
+      setIsEditing(false);
       console.log("Cambios guardados");
     } catch (error) {
       console.error("Error al guardar los cambios:", error);
@@ -53,7 +46,6 @@ const EditAndDeleteDataForm = () => {
   };
 
   const handleCancelarClick = () => {
-    // Cancelar la edición y volver a los datos originales
     setIsEditing(false);
     setEditedFields({});
   };
@@ -157,9 +149,6 @@ const EditAndDeleteDataForm = () => {
                     <button onClick={() => selectPatient(patient)}>
                       Seleccionar
                     </button>
-                    <button onClick={() => handleEliminarClick(patient)}>
-                      Borrar
-                    </button>
                   </td>
                 </tr>
               ))}
@@ -183,8 +172,10 @@ const EditAndDeleteDataForm = () => {
                     type="text"
                     id="firstNameInput"
                     name="firstName"
-                    value={selectedPatientInfo.secondName}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.firstName}
+                    onChange={(e) => {
+                      selectedPatientInfo.firstName = e.target.value;
+                    }}
                     required
                   />
                 </div>
@@ -197,8 +188,10 @@ const EditAndDeleteDataForm = () => {
                     type="text"
                     id="secondNameInput"
                     name="secondName"
-                    value={selectedPatientInfo.secondName}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.secondName}
+                    onChange={(e) => {
+                      selectedPatientInfo.secondName = e.target.value;
+                    }}
                   />
                 </div>
                 {/*PRIMER APELLIDO COL 1*/}
@@ -209,8 +202,10 @@ const EditAndDeleteDataForm = () => {
                     type="text"
                     id="firstSurNameInput"
                     name="firstSurName"
-                    value={selectedPatientInfo.firstSurName}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.firstSurName}
+                    onChange={(e) => {
+                      selectedPatientInfo.firstSurName = e.target.value;
+                    }}
                     required
                   />
                 </div>
@@ -222,8 +217,10 @@ const EditAndDeleteDataForm = () => {
                     type="text"
                     id="secondSurNameInput"
                     name="secondSurName"
-                    value={selectedPatientInfo.secondSurName}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.secondSurName}
+                    onChange={(e) => {
+                      selectedPatientInfo.secondSurName = e.target.value;
+                    }}
                   />
                 </div>
               </div>
@@ -237,8 +234,10 @@ const EditAndDeleteDataForm = () => {
                   <select
                     id="kindDocSelect"
                     name="kindDoc"
-                    value={selectedPatientInfo.kindDoc}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.kindDoc}
+                    onChange={(e) => {
+                      selectedPatientInfo.kindDoc = e.target.value;
+                    }}
                     required
                   >
                     <option value="" disabled hidden>
@@ -273,8 +272,10 @@ const EditAndDeleteDataForm = () => {
                     inputMode="numeric"
                     id="docNumberInput"
                     name="docNumber"
-                    value={selectedPatientInfo.docNumber}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.docNumber}
+                    onChange={(e) => {
+                      selectedPatientInfo.docNumber = e.target.value;
+                    }}
                     required
                   />
                 </div>
@@ -287,8 +288,10 @@ const EditAndDeleteDataForm = () => {
                     type="date"
                     id="nataleDateInput"
                     name="nataleDate"
-                    value={selectedPatientInfo.nataleDate}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.nataleDate}
+                    onChange={(e) => {
+                      selectedPatientInfo.nataleDate = e.target.value;
+                    }}
                     required
                   />
                 </div>
@@ -300,8 +303,10 @@ const EditAndDeleteDataForm = () => {
                   <select
                     id="maritalStatusInput"
                     name="maritalStatus"
-                    value={selectedPatientInfo.maritalStatus}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.maritalStatus}
+                    onChange={(e) => {
+                      selectedPatientInfo.maritalStatus = e.target.value;
+                    }}
                     required
                   >
                     <option value="" disabled hidden>
@@ -330,8 +335,10 @@ const EditAndDeleteDataForm = () => {
                   <select
                     id="disabilitySelect"
                     name="disability"
-                    value={selectedPatientInfo.disability}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.disability}
+                    onChange={(e) => {
+                      selectedPatientInfo.disability = e.target.value;
+                    }}
                     required
                   >
                     <option value="" disabled hidden>
@@ -348,8 +355,10 @@ const EditAndDeleteDataForm = () => {
                   <select
                     id="genderSelect"
                     name="gender"
-                    value={selectedPatientInfo.gender}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.gender}
+                    onChange={(e) => {
+                      selectedPatientInfo.gender = e.target.value;
+                    }}
                     required
                   >
                     <option value="" disabled hidden>
@@ -369,8 +378,10 @@ const EditAndDeleteDataForm = () => {
                     type="text"
                     id="occupationInput"
                     name="occupation"
-                    value={selectedPatientInfo.occupation}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.occupation}
+                    onChange={(e) => {
+                      selectedPatientInfo.occupation = e.target.value;
+                    }}
                     required
                   />
                 </div>
@@ -383,8 +394,10 @@ const EditAndDeleteDataForm = () => {
                     inputMode="tel"
                     id="phoneNumberInput"
                     name="phoneNumber"
-                    value={selectedPatientInfo.phoneNumber}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.phoneNumber}
+                    onChange={(e) => {
+                      selectedPatientInfo.phoneNumber = e.target.value;
+                    }}
                     required
                   />
                 </div>
@@ -399,8 +412,10 @@ const EditAndDeleteDataForm = () => {
                     type="email"
                     id="emailInput"
                     name="email"
-                    value={selectedPatientInfo.email}
-                    onChange={(e) => handleInputChange(e)}
+                    defaultValue={selectedPatientInfo.email}
+                    onChange={(e) => {
+                      selectedPatientInfo.email = e.target.value;
+                    }}
                     required
                   />
                 </div>

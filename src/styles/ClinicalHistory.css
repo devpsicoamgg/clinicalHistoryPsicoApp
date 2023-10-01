@@ -509,6 +509,9 @@ textarea#transcriptionInput,
 
 .diagnoses-impression .input-diagnosis {
   width: 350px;
+  border-color: #242424;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+
 }
 
 .diagnoses-impression .label-dx-choices {

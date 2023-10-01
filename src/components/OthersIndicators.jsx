@@ -15,6 +15,7 @@ const OtherIndicators = () => {
     "ANTECEDENTES FAMILIARES EN SALUD MENTAL",
     "EDUCACIÓN Y TRABAJO",
     "RELACIONES FAMILIARES",
+    "OBSERVACIONES DEL TERAPEUTA",
   ];
 
   const [indicatorsData, setIndicatorsData] = useState({
@@ -31,6 +32,7 @@ const OtherIndicators = () => {
     "ANTECEDENTES FAMILIARES EN SALUD MENTAL": "",
     "EDUCACIÓN Y TRABAJO": "",
     "RELACIONES FAMILIARES": "",
+    "OBSERVACIONES DEL TERAPEUTA": "",
   });
 
   const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);

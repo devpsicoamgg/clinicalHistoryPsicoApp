@@ -43,7 +43,7 @@ const DiagnosesImpression = ({ onUpdateDiagnosisData }) => {
       <form onSubmit={handleSubmit}>
         <div className="diagnoses-impression-container">
           <div className="diagnoses-impression">
-            <label className="label-dx">Diagnóstico Principal:</label>
+            <label className="label-dx-pp">Diagnóstico Principal:</label>
             <input
               type="text"
               name="mainDiagnosis"

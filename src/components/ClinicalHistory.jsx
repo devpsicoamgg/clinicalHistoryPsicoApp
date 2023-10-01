@@ -10,6 +10,7 @@ import OtherIndicators from "./OthersIndicators";
 import DiagnosesImpression from "./DiagnosysImpresion";
 import SearchPatientResults from "./SearchPatientResults";
 import OtroComponente from "./Examples";
+import EditAndDeleteDataForm from "./EditAndDelete";
 
 const ClinicalHistory = () => {
   const [patients, setPatients] = useState([]);
@@ -169,8 +170,9 @@ const ClinicalHistory = () => {
           )}
         </div>
       </div>
-<OtroComponente />
+      <OtroComponente />
 
+      <EditAndDeleteDataForm />
     </>
   );
 };

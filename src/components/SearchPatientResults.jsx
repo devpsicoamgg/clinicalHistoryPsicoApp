@@ -68,7 +68,7 @@ const SearchPatientResults = () => {
 
       <div>
         {loading ? (
-          <p>Cargando pacientes...</p>
+          <h2>Cargando pacientes...</h2>
         ) : filteredResults.length > 0 ? (
           <table className="patient-info-table">
             <thead>
@@ -104,7 +104,6 @@ const SearchPatientResults = () => {
       {/* Mostrar detalles del paciente seleccionado */}
       {selectedPatientInfo && (
         <div>
-          <h2>Información:</h2>
           <table className="patient-info-table">
             <tbody>
               <tr>

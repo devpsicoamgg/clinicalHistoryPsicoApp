@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { helpHttp } from "../api/Helpers/helpHttps";
 
+// Define la URL de la API o servidor aquí
+const apiUrl = "http://localhost:3000/patients";
+
 export const useForm = (initialForm, validationForm) => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
@@ -15,13 +18,15 @@ export const useForm = (initialForm, validationForm) => {
 
   const handleSearch = async () => {
     try {
+      console.log("Realizando búsqueda...");
+      console.log("URL de búsqueda:", apiUrl);
+
       // Realizar una solicitud HTTP para buscar pacientes y retornar los datos
-      const response = await fetch(
-        `http://localhost:3000/patients?search=${searchQuery}`
-      );
+      const response = await fetch(`${apiUrl}?search=${searchQuery}`);
 
       if (response.ok) {
         const data = await response.json();
+        console.log("Resultados de búsqueda:", data);
         return data; // Devolver los datos obtenidos
       } else {
         // Manejar el error si es necesario
@@ -35,6 +40,35 @@ export const useForm = (initialForm, validationForm) => {
     }
   };
 
+  const deletePatient = async (patientId) => {
+    try {
+      console.log("Eliminando paciente con ID:", patientId);
+      console.log("URL de eliminación:", `${apiUrl}/${patientId}`);
+
+      // Define la URL de la API o servidor donde eliminarás al paciente
+      const apiUrl = `${apiUrl}/${patientId}`;
+
+      // Aquí utilizas http.del correctamente
+      const response = await helpHttp().del(apiUrl);
+      console.log("Respuesta de eliminación:", response);
+
+      // Verifica si la solicitud DELETE fue exitosa
+      if (response.err) {
+        console.error("Error al eliminar:", response.status);
+        // Maneja el error si es necesario
+        // Puedes mostrar un mensaje de error al usuario, por ejemplo
+      } else {
+        // Eliminación exitosa, actualiza la lista de resultados después de la eliminación
+        setSearchResult((prevResults) =>
+          prevResults.filter((item) => item.id !== patientId)
+        );
+      }
+    } catch (error) {
+      console.error("Error al eliminar el paciente:", error.message);
+      // Puedes manejar el error de alguna manera y mostrar un mensaje de error al usuario si lo deseas
+    }
+  };
+
   const selectPatient = (patient) => {
     console.log(patient);
     setSelectedPatient(patient);
@@ -43,7 +77,7 @@ export const useForm = (initialForm, validationForm) => {
   };
 
   const createData = async (data) => {
-    const url = "http://localhost:3000/patients";
+    const url = apiUrl; // Utiliza la constante apiUrl definida arriba
     const options = {
       method: "POST",
       body: JSON.stringify(data),
@@ -63,7 +97,7 @@ export const useForm = (initialForm, validationForm) => {
         return;
       }
 
-      const apiUrl = `http://localhost:3000/patients/${selectedPatientId}`;
+      const apiUrl = `${apiUrl}/${selectedPatientId}`; // Utiliza la constante apiUrl definida arriba
       const options = {
         method: "PUT",
         headers: {
@@ -158,7 +192,7 @@ export const useForm = (initialForm, validationForm) => {
 
   const getPatients = async () => {
     try {
-      const url = "http://localhost:3000/patients";
+      const url = apiUrl; // Utiliza la constante apiUrl definida arriba
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error("Error al obtener pacientes");
@@ -173,7 +207,7 @@ export const useForm = (initialForm, validationForm) => {
 
   const searchPatients = async (searchQuery) => {
     try {
-      const url = `http://localhost:3000/patients?search=${searchQuery}`;
+      const url = `${apiUrl}?search=${searchQuery}`; // Utiliza la constante apiUrl definida arriba
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error("Error al buscar pacientes");
@@ -188,7 +222,7 @@ export const useForm = (initialForm, validationForm) => {
 
   const fetchPatients = async () => {
     try {
-      const url = "http://localhost:3000/patients";
+      const url = apiUrl; // Utiliza la constante apiUrl definida arriba
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error("Error al obtener pacientes");
@@ -211,6 +245,7 @@ export const useForm = (initialForm, validationForm) => {
     handleChange,
     handleBlur,
     handleSubmit,
+    deletePatient,
     updateData,
     patients,
     selectedPatient,

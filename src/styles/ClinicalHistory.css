@@ -24,13 +24,13 @@
 /* SearchPatientResults.css */
 
 .patient-info-table {
-  border-collapse: collapse; /* Colapsar bordes de la tabla */
+margin-top: 0.8%;
   width: 100%;
-  background-color: #fff; /* Fondo blanco para la tabla */
+  background-color: #fff; 
   box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.772);
   border-radius: 5px;
   padding: 5px;
-  text-align: center; /* Centrar todo el contenido */
+  text-align: center; 
 }
 
 .patient-info-table td {
@@ -411,10 +411,15 @@ textarea#transcriptionInput,
   margin-right: 12px;
   padding-top: 15px;
   padding-bottom: 10px;
-
-
-
 }
+.other-indicators-container input[type="text"] {
+  width: 78%;
+  padding: 10px;
+  border: 1px solid #3d3d3d;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.9); 
+  border-radius: 5px;
+}
+
 .porteyaparienciacontainer {
   border: 1px solid #3d3d3d;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.9); 
@@ -430,7 +435,6 @@ textarea#transcriptionInput,
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.9); 
   border-radius: 5px;
 }
-
 
 
 .category-title-bold {
@@ -476,6 +480,7 @@ textarea#transcriptionInput,
 }
 
 
+
 .diagnoses-impression {
   display: flex;
   border: 1px solid #ccc; 
@@ -484,7 +489,16 @@ textarea#transcriptionInput,
   margin: 10px;
 }
 
-.label-dx {
+.diagnoses-impression .label-dx {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 23px;
+  margin-left: 35px;
+  font-weight: bold;
+}
+
+
+.diagnoses-impression .label-dx-pp {
   text-align: left;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -493,25 +507,20 @@ textarea#transcriptionInput,
   font-weight: bold;
 }
 
-.input-diagnosis {
+.diagnoses-impression .input-diagnosis {
   width: 350px;
-  height: 25px;
-  background-color:  #fff;
-  color: #000000;
-  box-shadow: 0px 4px 9px rgba(0, 0, 0, 9); 
-  border: 1px solid #969696; 
-  border-radius: 5px;
 }
 
-
-
-.label-dx-choices {
-  width: 130px;
+.diagnoses-impression .label-dx-choices {
+  width: 160px;
+  margin-left: 5%;
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 9); 
   border: 1px solid #ccc; 
-  height: 30px;
-  margin-left: 25px;
+  height: auto;
   border-radius: 5px;
-   background-color: #242424;
+  background-color: #242424;
   color: #fff;
 }
+
+
+

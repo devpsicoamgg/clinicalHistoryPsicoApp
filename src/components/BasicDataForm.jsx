@@ -5,6 +5,8 @@ import validationForm from "../utils/ValidationForm";
 import closeImage from "../img/close1.png";
 import title from "../img/titleMod1.png";
 import { helpHttp } from "../api/Helpers/helpHttps";
+import { useDispatch } from "react-redux"; 
+import { addPatient } from "../redux/patientSlice";
 
 const url = "http://localhost:3000/patients";
 let api = helpHttp();
@@ -64,10 +66,15 @@ const BasicDataForm = () => {
     closeForm();
   };
 
+  const dispatch = useDispatch(); // Importa useDispatch desde 'react-redux'
+
   const onSubmit = async () => {
     try {
       const result = await createData(form);
       console.log("Respuesta del servidor:", result);
+
+      // Después de que se complete la solicitud exitosamente, puedes agregar al paciente a tu estado Redux
+      dispatch(addPatient(result)); // Utiliza la acción addPatient para agregar al paciente
     } catch (error) {
       console.error("Error al enviar datos:", error);
     }

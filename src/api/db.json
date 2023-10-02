@@ -454,6 +454,40 @@
       "phoneNumber": "6546546546546",
       "id": 1695679869159,
       "registrationDate": "25/9/2023 - 05:11 PM"
+    },
+    {
+      "firstName": "alberto",
+      "secondName": "EDUARDO",
+      "firstSurName": "CAMILO",
+      "secondSurName": "ANDRES",
+      "kindDoc": "Tarjeta de identidad",
+      "docNumber": "8768757576",
+      "nataleDate": "1978-08-17",
+      "maritalStatus": "Casado/a",
+      "disability": "Si",
+      "gender": "Masculino",
+      "occupation": "HOGAR",
+      "email": "PEPE@gmail.com",
+      "phoneNumber": "566547654645",
+      "id": 1696267511867,
+      "registrationDate": "2/10/2023 - 12:25 PM"
+    },
+    {
+      "firstName": "LUNA",
+      "secondName": "LUCIA",
+      "firstSurName": "OVALLE",
+      "secondSurName": "OLVINA",
+      "kindDoc": "Tarjeta de identidad",
+      "docNumber": "78654899",
+      "nataleDate": "2009-07-18",
+      "maritalStatus": "Divorciado/a",
+      "disability": "No",
+      "gender": "Femenino",
+      "occupation": "PREPAGO",
+      "email": "lucquitasluna@hotmail.com",
+      "phoneNumber": "768678687687",
+      "id": 1696269209001,
+      "registrationDate": "2/10/2023 - 12:53 PM"
     }
   ]
 }

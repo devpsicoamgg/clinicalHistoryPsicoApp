@@ -488,6 +488,40 @@
       "phoneNumber": "768678687687",
       "id": 1696269209001,
       "registrationDate": "2/10/2023 - 12:53 PM"
+    },
+    {
+      "firstName": "AURI",
+      "secondName": "ESMERAL",
+      "firstSurName": "ESCOBAR",
+      "secondSurName": "PULIDO",
+      "kindDoc": "Cédula de ciudadanía",
+      "docNumber": "765757657657",
+      "nataleDate": "2008-11-16",
+      "maritalStatus": "Soltero/a",
+      "disability": "No",
+      "gender": "Femenino",
+      "occupation": "YTFDYDYTRY",
+      "email": "psico.amgg@gmail.com",
+      "phoneNumber": "8675875765765",
+      "id": 1698963155136,
+      "registrationDate": "2/11/2023 - 05:12 PM"
+    },
+    {
+      "firstName": "Alberto",
+      "secondName": "Gonzalez",
+      "firstSurName": "Alberto",
+      "secondSurName": "Gonzalez",
+      "kindDoc": "Cédula de ciudadanía",
+      "docNumber": "79953987",
+      "nataleDate": "1987-12-16",
+      "maritalStatus": "Soltero/a",
+      "disability": "No",
+      "gender": "Femenino",
+      "occupation": "hogar",
+      "email": "psico.amgg@gmail.com",
+      "phoneNumber": "3144053626",
+      "id": 1698963653497,
+      "registrationDate": "2/11/2023 - 05:20 PM"
     }
   ]
 }

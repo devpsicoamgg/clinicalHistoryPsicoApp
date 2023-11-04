@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { helpHttp } from "../api/Helpers/helpHttps";
 
-// Define la URL de la API o servidor aquí
+
 const apiUrl = "http://localhost:3000/patients";
 
 export const useForm = (initialForm, validationForm) => {
@@ -18,7 +18,7 @@ export const useForm = (initialForm, validationForm) => {
 
   const handleSearch = async () => {
     try {
-      console.log("Realizando búsqueda...");
+      console.log("Realizando búsqueda de handleSearch...");
       console.log("URL de búsqueda:", apiUrl);
 
       // Realizar una solicitud HTTP para buscar pacientes y retornar los datos
@@ -26,16 +26,16 @@ export const useForm = (initialForm, validationForm) => {
 
       if (response.ok) {
         const data = await response.json();
-        console.log("Resultados de búsqueda:", data);
+        console.log("Resultados de búsqueda de handleSearch esta es la data:", data);
         return data; // Devolver los datos obtenidos
       } else {
         // Manejar el error si es necesario
-        console.error("Error al buscar pacientes:", response.status);
+        console.error("Error al buscar pacientes con handleSearch:", response.status);
         return []; // En caso de error, retornar un arreglo vacío
       }
     } catch (error) {
       // Manejar el error si es necesario
-      console.error("Error al buscar pacientes:", error);
+      console.error("Error al buscar pacientes en handleSearch:", error);
       return []; // En caso de error, retornar un arreglo vacío
     }
   };

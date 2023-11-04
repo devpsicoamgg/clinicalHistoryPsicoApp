@@ -9,6 +9,8 @@ import ConsultationSection from "./ConsultationSection";
 import OtherIndicators from "./OthersIndicators";
 import DiagnosesImpression from "./DiagnosysImpresion";
 import SearchPatientResults from "./SearchPatientResults";
+import { useNavigate } from 'react-router-dom';
+import closeImage from "../img/cerrar.png";
 
 const ClinicalHistory = () => {
   const [patients, setPatients] = useState([]);
@@ -31,10 +33,24 @@ const ClinicalHistory = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const { getPatients, updateData, fetchPatients, searchPatients } = useForm();
 
+
+  const navigate = useNavigate();
+
+  const handleCloseForm = () => {
+  
+    navigate('/');
+  }
+
   return (
     <>
       <div className="clinical-history-container">
         <h1> HISTORIA CLÍNICA PSICOLOGÍA </h1>
+        <img
+              src={closeImage}
+              className="closeBtnHC"
+              onClick={handleCloseForm}
+              alt="cerrar"
+            />
         <SearchPatientResults
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}

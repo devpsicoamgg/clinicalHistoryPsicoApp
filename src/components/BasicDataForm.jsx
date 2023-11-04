@@ -7,6 +7,8 @@ import title from "../img/titleMod1.png";
 import { helpHttp } from "../api/Helpers/helpHttps";
 import { useDispatch } from "react-redux"; 
 import { addPatient } from "../redux/patientSlice";
+import { useNavigate } from 'react-router-dom';
+
 
 const url = "http://localhost:3000/patients";
 let api = helpHttp();
@@ -62,10 +64,12 @@ const BasicDataForm = () => {
     handleSubmit,
   } = useForm(initialForm, validationForm);
 
-  const handleCloseForm = () => {
-    closeForm();
-  };
+  const navigate = useNavigate();
 
+  const handleCloseForm = () => {
+  
+    navigate('/');
+  }
   const dispatch = useDispatch(); // Importa useDispatch desde 'react-redux'
 
   const onSubmit = async () => {

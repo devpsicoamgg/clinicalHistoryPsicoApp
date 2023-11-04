@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
-import { useForm } from "../hooks/useForms";
+import { useForm } from "../hooks/UseForms";
 import validationForm from "../utils/ValidationForm";
 import "../styles/EditAndDelete.css";
 import { helpHttp } from "../api/Helpers/helpHttps";
@@ -54,7 +54,10 @@ const EditAndDeleteDataForm = () => {
   const handleEliminarClick = async () => {
     if (
       selectedPatientInfo &&
-      window.confirm("¿Estás seguro de que deseas eliminar este paciente?")
+      window.confirm(
+        "¿Estás seguro de que deseas eliminar este paciente con Id No?" +
+          selectedPatientInfo.id
+      )
     ) {
       try {
         // Llama a la función para eliminar al paciente
@@ -113,16 +116,18 @@ const EditAndDeleteDataForm = () => {
 
   return (
     <div className="search-container">
-
       <img
         src={closeImage}
         className="closeBtnSearch"
         alt="cerrar"
         onClick={() => {}}
       />
-  
-    <h2> MODULO DE EDICIÓN DATOS BÁSICOS <br/> 
-    & <br/> ELIMINACIÓN PACIENTE </h2>
+
+      <h2>
+        {" "}
+        MODULO DE EDICIÓN DATOS BÁSICOS <br />
+        & <br /> ELIMINACIÓN PACIENTE{" "}
+      </h2>
       <input
         type="text"
         className="input-search-patients"

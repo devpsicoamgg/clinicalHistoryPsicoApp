@@ -5,6 +5,7 @@ const initialState = {
   patients: [], // Almacenará la lista de pacientes
 };
 
+
 const patientSlice = createSlice({
   name: "patient",
   initialState,
